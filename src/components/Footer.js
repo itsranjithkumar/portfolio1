@@ -1,22 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-import Layout from './Layout';
-
-const Footer = () => {
-  return (
-    <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg">
-      <Layout className='py-8 flex items-center justify-between'>
-        <span className='mr-4 align-middle'>{new Date().getFullYear()}&copy; All Rights Reserved</span>
-        <div className='flex items-center justify-center'>
-          <span className='mr-1'>Build with</span>
-          <span className='text-primary text-2xl px-1'>&#9825;</span>
-          <span className='mx-1'>by</span>
-          <Link href="/" className='underline'>Ranjithkumar</Link>
+export default function Footer() {
+    return (
+      <footer className="w-full py-4 bg-white border-t">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <div className="text-lg text-black mb-2 sm:mb-0">2025© All Rights Reserved</div>
+            <div className="text-lg text-black mb-2 sm:mb-0">Build with ♡ by Ranjithkumar</div>
+            <div className="text-lg text-black">say hello</div>
+          </div>
         </div>
-        <Link href="/" className='ml-250'>say hello</Link>
-      </Layout>
-    </footer>
-  );
+      </footer>
+    )
 }
-
-export default Footer;
