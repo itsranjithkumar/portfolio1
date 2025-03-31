@@ -16,18 +16,9 @@ module.exports = {
                 primary: "#B63E96", // 240,86,199
                 primaryDark: "#58E6D9", // 80,230,217
             },
-            module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}', // Ensure this line includes your files
-  ],
-  theme: {
-    extend: {
-      animation: {
-        'spin-slow': 'spin 8s linear infinite',
-      },
-    },
-  },
-}
+            backgroundImage: {
+                circularLight:'repeating-radial-grient(rgba(0.0.0.0.5), 2px,#f5f5f5, 5px #f5f5f5, 100px)'
+            },
           
         },
     },
