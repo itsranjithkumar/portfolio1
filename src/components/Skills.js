@@ -1,123 +1,123 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-// import { Plus, X, Edit, Save } from "lucide-react"
+import { useState, useEffect } from "react"
+
+const SkillCategory = ({ title, skills, delay }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      className="mb-12"
+    >
+      <h3 className="text-2xl font-bold mb-6 relative inline-block">
+        {title}
+        <motion.span 
+          className="absolute bottom-0 left-0 h-[2px] bg-black dark:bg-white"
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 0.5, delay: delay + 0.3 }}
+        />
+      </h3>
+      <div className="flex flex-wrap gap-4">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={skill}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: delay + index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            className="relative group cursor-pointer"
+          >
+            <div 
+              className="px-6 py-3 rounded-lg border-2 border-black dark:border-white font-medium 
+                         bg-black text-white transition-all duration-300 ease-in-out
+                         group-hover:bg-white group-hover:text-black"
+            >
+              {skill}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  )
+}
 
 const Skills = () => {
   const [mounted, setMounted] = useState(false)
-
-  // Initial skills data
-  const [skills, setSkills] = useState([
-    { id: 1, name: "Web", orbit: 0, angle: 0 }, // Center skill
-    // First orbit
-    { id: 2, name: "HTML", orbit: 1, angle: 0 },    // 0 degrees
-    { id: 3, name: "CSS", orbit: 1, angle: 105 },    // 90 degrees
-    // Second orbit
-    { id: 6, name: "NextJS", orbit: 2, angle: 30 },  // 30 degrees
-    { id: 8, name: "Tailwind CSS", orbit: 2, angle: 320 }, // 270 degrees
-    // Third orbit
-    { id: 9, name: "Github", orbit: 3, angle: 165 },   // 0 degrees
-    { id: 10, name: "Firebase", orbit: 3, angle: 60 }, // 60 degrees
-    { id: 11, name: "Javascript", orbit: 3, angle: 128 },  // 120 degrees
-    { id: 7, name: "ReactJS", orbit: 2, angle: 180 }, // 150 degrees
-    { id: 12, name: "Web Design", orbit: 3, angle: 210 }, // 210 degrees
-    { id: 13, name: "Web Development", orbit: 3, angle: 255 }, // 270 degrees
-  ])
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  // Ensure the skills are properly aligned in the orbital structure
-  const getPosition = (orbit, angle) => {
-    const orbitSizes = [0, 120, 220, 320];
-    const radius = orbitSizes[orbit];
-    const radians = (angle * Math.PI) / 180;
-    const x = Math.cos(radians) * radius;
-    const y = Math.sin(radians) * radius;
-    return { x, y };
-  };
+  const skillsData = {
+    "Frontend Development": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+    ],
+    "Backend & Database": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "REST API",
+    ],
+    "Tools & Others": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Responsive Design",
+      "Web Performance",
+    ],
+  }
 
   if (!mounted) return null
 
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-white dark:bg-gray-900 py-20">
-      {/* Title */}
-      <div className="w-full flex justify-center items-center mb-8 relative">
-        <h2 className="font-bold text-8xl mb-8 w-full text-center dark:text-white">Skills</h2>
-      </div>
+    <section className="py-20 px-8">
+      {/* Header */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-16"
+      >
+        <motion.h2 
+          className="text-7xl font-bold mb-6 relative inline-block"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Technical Skills
+        </motion.h2>
+        <motion.div 
+          className="w-24 h-1 bg-black dark:bg-white mx-auto"
+          initial={{ width: 0 }}
+          animate={{ width: "6rem" }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        />
+      </motion.div>
 
-      {/* Orbital visualization */}
-      <div className="relative w-[700px] h-[700px]">
-        {/* Orbit circles */}
-        {[1, 2, 3].map((orbit) => (
-          <div
-            key={`orbit-${orbit}`}
-            className="absolute top-1/2 left-1/2 rounded-full border border-gray-300 dark:border-gray-700"
-            style={{
-              width: `${orbit * 240}px`,
-              height: `${orbit * 240}px`,
-              transform: "translate(-50%, -50%)",
-              opacity: 0.7,
-            }}
+      {/* Skills Grid */}
+      <div className="max-w-5xl mx-auto">
+        {Object.entries(skillsData).map(([category, skills], index) => (
+          <SkillCategory
+            key={category}
+            title={category}
+            skills={skills}
+            delay={index * 0.3}
           />
         ))}
-
-        {/* Skills */}
-        {skills.map((skill) => {
-          const { x, y } = getPosition(skill.orbit, skill.angle)
-
-          // Special styling for the center "Web" skill
-          if (skill.orbit === 0) {
-            return (
-              <motion.div
-                key={`skill-${skill.id}`}
-                className="absolute top-1/2 left-1/2 flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                style={{
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                <div className="bg-black dark:bg-black text-white px-6 py-3 rounded-full font-medium text-lg">
-                  {skill.name}
-                </div>
-              </motion.div>
-            )
-          }
-
-          // Animation for orbital skills
-          const orbitDelay = skill.orbit * 0.1 + skill.id * 0.05
-
-          return (
-            <motion.div
-              key={`skill-${skill.id}`}
-              className="absolute top-1/2 left-1/2"
-              initial={{ opacity: 0, x, y }}
-              animate={{
-                opacity: 1,
-                x,
-                y,
-              }}
-              transition={{
-                opacity: { duration: 0.8, delay: orbitDelay },
-                x: { duration: 0.8, delay: orbitDelay },
-                y: { duration: 0.8, delay: orbitDelay },
-              }}
-              style={{
-                transform: "translate(-50%, -50%)",
-              }}
-            >
-              <div className="bg-black dark:bg-black text-white px-5 py-2.5 rounded-full font-medium whitespace-nowrap shadow-lg">
-                {skill.name}
-              </div>
-            </motion.div>
-          )
-        })}
       </div>
-    </div>
+
+      {/* Background Decoration */}
+      <div className="absolute top-0 right-0 -z-10 w-72 h-72 bg-black/5 dark:bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 -z-10 w-72 h-72 bg-black/5 dark:bg-white/5 rounded-full blur-3xl" />
+    </section>
   )
 }
 
