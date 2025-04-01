@@ -6,18 +6,23 @@ import LiIcon from './LiIcon'
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
     const ref = useRef(null);
-    return <li  ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
+    return <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between'>
         <LiIcon reference={ref} />
         <motion.div
         initial={{y:50}}
         whileInView={{y:0}}
         transition={{duration:0.5, type:"spring"}}
-        className='w-full'
         >
-<h3 className='capitalize font-bold text-2xl'>{position}&nbsp;<a href={companyLink}
-            target="_blank" className='text-pink-500 capitalize'>@{company}</a></h3>
-            <span className='capitalize font-medium text-black/75'>{time} | {address}</span>
-            <p className='font-medium w-full'>{work}</p>
+            <h3 className="text-3xl md:text-4xl font-bold">{position}</h3>
+            <h4 className="text-xl md:text-2xl font-semibold text-black/75 dark:text-white/75">
+                {company}
+            </h4>
+            <span className="text-base md:text-lg font-medium text-black/60 dark:text-white/60">
+                {time} | {address}
+            </span>
+            <p className="text-lg md:text-xl font-medium w-full">
+                {work}
+            </p>
         </motion.div>
     </li>
     
@@ -31,64 +36,87 @@ const Experience = () => {
             offset: ["start end", "center start"]
         }
     );
-  return (
-    <div className='my-64'>
-    <h2 className='font-bold text-8xl mb-32 w-full text-center ' >Experience</h2>
+    return (
+        <div className='my-64'>
+            <div className="text-center mb-24">
+                <motion.h2 
+                    className="text-7xl md:text-8xl font-bold mb-8 relative inline-block"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Experience
+                    <motion.span 
+                        className="absolute -bottom-4 left-0 w-full h-1 bg-black dark:bg-white"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                    />
+                </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 0.7, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="text-lg md:text-xl font-light tracking-wide"
+                >
+                    My professional journey
+                </motion.p>
+            </div>
 
-    <div className='w-[75%] mx-auto relative'>
+            <div className='w-[75%] mx-auto relative'>
+                <motion.div 
+                    style={{scaleY: scrollYProgress}}
+                    ref={ref} 
+                    className='absolute left-9 top-0 w-[4px] h-full bg-black origin-top'
+                />
 
-        <motion.div 
-        style={{scaleY: scrollYProgress}}
-        ref={ref} className='absolute left-50 top-0 w-[4px] h-full bg-black origin-top'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 pl-1'>
+                    <Details
+                      position="Software Engineer"
+                      company="Google"
+                      companyLink="https://google.com"
+                      time="2022-Present"
+                      address="Mountain View, CA"
+                      work="Worked on a team responsible for developing new features for Google's 
+                    search engine, including improving the accuracy and relevance of search results and 
+                    developing new tools for data analysis and visualization."
+                    />
+                    <Details
+                      position="Software Engineer"
+                      company="Google"
+                      companyLink="https://google.com"
+                      time="2022-Present"
+                      address="Mountain View, CA"
+                      work="Worked on a team responsible for developing new features for Google's 
+                    search engine, including improving the accuracy and relevance of search results and 
+                    developing new tools for data analysis and visualization."
+                    />
+                    <Details
+                      position="Software Engineer"
+                      company="Google"
+                      companyLink="https://google.com"
+                      time="2022-Present"
+                      address="Mountain View, CA"
+                      work="Worked on a team responsible for developing new features for Google's 
+                    search engine, including improving the accuracy and relevance of search results and 
+                    developing new tools for data analysis and visualization."
+                    />
+                    <Details
+                      position="Software Engineer"
+                      company="Google"
+                      companyLink="https://google.com"
+                      time="2022-Present"
+                      address="Mountain View, CA"
+                      work="Worked on a team responsible for developing new features for Google's 
+                    search engine, including improving the accuracy and relevance of search results and 
+                    developing new tools for data analysis and visualization."
+                    />
 
-        </motion.div>
-      <ul className='w-full flex flex-col items-start justify-between ml-4 pl-15'>
-        <Details
-          position="Software Engineer"
-          company="Google"
-          companyLink="https://google.com"
-          time="2022-Present"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's 
-        search engine, including improving the accuracy and relevance of search results and 
-        developing new tools for data analysis and visualization."
-        />
-        <Details
-          position="Software Engineer"
-          company="Google"
-          companyLink="https://google.com"
-          time="2022-Present"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's 
-        search engine, including improving the accuracy and relevance of search results and 
-        developing new tools for data analysis and visualization."
-        />
-        <Details
-          position="Software Engineer"
-          company="Google"
-          companyLink="https://google.com"
-          time="2022-Present"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's 
-        search engine, including improving the accuracy and relevance of search results and 
-        developing new tools for data analysis and visualization."
-        />
-        <Details
-          position="Software Engineer"
-          company="Google"
-          companyLink="https://google.com"
-          time="2022-Present"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's 
-        search engine, including improving the accuracy and relevance of search results and 
-        developing new tools for data analysis and visualization."
-        />
+                </ul>
+            </div>
 
-      </ul>
-    </div>
-
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Experience
