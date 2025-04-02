@@ -22,22 +22,22 @@ const SkillCard = ({ skill, index, category }) => {
           rotateX: isHovered ? -10 : 0,
         }}
         transition={{ duration: 0.3 }}
-        className="relative z-10 bg-white dark:bg-black p-6 rounded-2xl border-2 border-black dark:border-white
-                   shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)]
+        className="relative z-10 bg-white p-6 rounded-2xl border-2 border-black
+                   shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
                    transform-gpu"
       >
         <div className="flex flex-col gap-4">
-          <span className="text-2xl md:text-3xl font-bold">{skill.name}</span>
+          <span className="text-2xl md:text-3xl font-bold text-black">{skill.name}</span>
           <div className="space-y-3">
-            <div className="h-2 w-full bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
+            <div className="h-2 w-full bg-black/10 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${skill.level}%` }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="h-full bg-black dark:bg-white rounded-full"
+                className="h-full bg-black rounded-full"
               />
             </div>
-            <span className="text-sm font-medium text-black/60 dark:text-white/60">
+            <span className="text-sm font-medium text-black/60">
               {skill.level}% Proficiency
             </span>
           </div>
@@ -65,7 +65,7 @@ const SkillCategory = ({ title, skills, delay }) => {
           {title}
         </motion.h3>
         <motion.div
-          className="absolute -bottom-4 left-0 h-1 bg-black dark:bg-white"
+          className="absolute -bottom-4 left-0 h-1 bg-black"
           initial={{ width: 0 }}
           animate={{ width: "40%" }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -122,7 +122,7 @@ const Skills = () => {
   if (!mounted) return null
 
   return (
-    <section className="py-32 px-8 relative">
+    <section className="py-32 px-8 relative bg-white">
       {/* Header */}
       <div className="text-center mb-32">
         <motion.div
@@ -130,9 +130,9 @@ const Skills = () => {
           animate={{ opacity: 1, y: 0 }}
           className="relative inline-block"
         >
-          <h2 className="text-7xl md:text-8xl font-bold mb-6">Expertise</h2>
+          <h2 className="text-7xl md:text-8xl font-bold text-black mb-6">Expertise</h2>
           <motion.div
-            className="absolute -bottom-4 left-1/2 w-1/2 h-1 bg-black dark:bg-white -translate-x-1/2"
+            className="absolute -bottom-4 left-1/2 w-1/2 h-1 bg-black -translate-x-1/2"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -142,7 +142,7 @@ const Skills = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ delay: 0.8 }}
-          className="text-xl md:text-2xl mt-8 tracking-wide max-w-3xl mx-auto"
+          className="text-xl md:text-2xl mt-8 tracking-wide max-w-3xl mx-auto text-black"
         >
           Mastering modern technologies to create exceptional digital experiences
         </motion.p>
@@ -163,7 +163,7 @@ const Skills = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-black/10 to-transparent dark:from-white/10 rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-black/10 to-transparent rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.2, 0.1],
@@ -175,7 +175,7 @@ const Skills = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-black/10 to-transparent dark:from-white/10 rounded-full blur-3xl"
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-black/10 to-transparent rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.2, 0.1, 0.2],

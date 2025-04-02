@@ -14,10 +14,10 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         transition={{duration:0.5, type:"spring"}}
         >
             <h3 className="text-3xl md:text-4xl font-bold">{position}</h3>
-            <h4 className="text-xl md:text-2xl font-semibold text-black/75 dark:text-white/75">
+            <h4 className="text-xl md:text-2xl font-semibold text-black/75">
                 {company}
             </h4>
-            <span className="text-base md:text-lg font-medium text-black/60 dark:text-white/60">
+            <span className="text-base md:text-lg font-medium text-black/60">
                 {time} | {address}
             </span>
             <p className="text-lg md:text-xl font-medium w-full">
@@ -47,7 +47,7 @@ const Experience = () => {
                 >
                     Experience
                     <motion.span 
-                        className="absolute -bottom-4 left-0 w-full h-1 bg-black dark:bg-white"
+                        className="absolute -bottom-4 left-0 w-full h-1 bg-black"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.3 }}

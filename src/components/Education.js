@@ -15,14 +15,14 @@ const Details = ({ type, time, place, info }) => {
                 transition={{duration:0.5, type:"spring"}}
                 className='w-full'
             >
-                <h3 className="text-3xl md:text-4xl font-bold">{type}</h3>
-                <h4 className="text-xl md:text-2xl font-semibold text-black/75 dark:text-white/75">
+                <h3 className="text-3xl md:text-4xl font-bold text-black">{type}</h3>
+                <h4 className="text-xl md:text-2xl font-semibold text-black/75">
                     {place}
                 </h4>
-                <span className="text-base md:text-lg font-medium text-black/60 dark:text-white/60">
+                <span className="text-base md:text-lg font-medium text-black/60">
                     {time}
                 </span>
-                <p className="text-lg md:text-xl font-medium w-full">
+                <p className="text-lg md:text-xl font-medium w-full text-black">
                     {info}
                 </p>
             </motion.div>
@@ -42,14 +42,14 @@ const Education = () => {
         <div className='my-64'>
             <div className="text-center mb-24">
                 <motion.h2 
-                    className="text-7xl md:text-8xl font-bold mb-8 relative inline-block"
+                    className="text-7xl md:text-8xl font-bold mb-8 relative inline-block text-black"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
                     Education
                     <motion.span 
-                        className="absolute -bottom-4 left-0 w-full h-1 bg-black dark:bg-white"
+                        className="absolute -bottom-4 left-0 w-full h-[2px] bg-black/75"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
@@ -59,7 +59,7 @@ const Education = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 0.7, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="text-lg md:text-xl font-light tracking-wide"
+                    className="text-lg md:text-xl font-light tracking-wide text-black/60"
                 >
                     Academic background
                 </motion.p>
@@ -69,7 +69,7 @@ const Education = () => {
                 <motion.div 
                     style={{scaleY: scrollYProgress}}
                     ref={ref} 
-                    className='absolute left-9 top-0 w-[4px] h-full bg-black dark:bg-white origin-top'
+                    className='absolute left-9 top-0 w-[2px] h-full bg-black/75 origin-top'
                 />
 
                 <ul className='w-full flex flex-col items-start justify-between ml-4'>
