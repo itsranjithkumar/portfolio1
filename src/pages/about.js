@@ -14,6 +14,7 @@ import MobileAboutSection from "@/components/MobileAboutSection"
 import MobileExperienceSection from "@/components/MobileExperienceSection"
 import MobileEducationSection from "@/components/MobileEducationSection"
 import MobileSkillsSection from "@/components/MobileSkillsSection"
+import TransitionEffect from "@/components/TransitionEffect"
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null)
@@ -48,6 +49,7 @@ const about = () => {
         <title>Ranjithkumar | About Page</title>
         <meta name="description" content="any description" />
       </Head>
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center overflow-visible">
         {/* Mobile-optimized sections - ONLY visible on mobile */}
         <div className="md:hidden w-full">
@@ -60,7 +62,7 @@ const about = () => {
         {/* Desktop layout - ONLY visible on desktop */}
         <div className="hidden md:block w-full">
           <Layout className="pt-8 sm:pt-16 relative z-0">
-            <AnimatedText text="Passion Fuels Purpose!" className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl" />
+            <AnimatedText text="Passion Fuels Purpose!"               className="mb-8 sm:mb-16 !text-4xl sm:!text-6xl md:!text-7xl lg:!text-8xl"/>
             <div className="grid w-full grid-cols-1 md:grid-cols-8 gap-6 md:gap-16">
               {/* Biography section */}
               <div

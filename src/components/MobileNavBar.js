@@ -54,9 +54,10 @@ const MobileNavBar = ({ isOpen, setIsOpen, mode, setMode }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col items-center justify-between sm:hidden"
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center sm:hidden"
         >
-          <div className="w-full flex justify-between items-center p-8">
+          {/* Close Button */}
+          <div className="absolute top-8 right-8">
             <button onClick={handleClick} className="text-white">
               <svg
                 width="24"
@@ -82,8 +83,8 @@ const MobileNavBar = ({ isOpen, setIsOpen, mode, setMode }) => {
             <h1 className="text-4xl font-bold text-white mt-4">Passion Fuels</h1>
           </div> */}
 
-          {/* Navigation Links */}
-          <nav className="flex flex-col items-center justify-center gap-8 text-xl">
+          {/* Navigation Links - Reduced gap */}
+          <nav className="flex flex-col items-center justify-center gap-4 text-2xl">
             <CustomLink href="/" title="Home" className="text-white hover:text-white/75" onClick={handleClick} />
             <CustomLink href="/about" title="About" className="text-white hover:text-white/75" onClick={handleClick} />
             <CustomLink
@@ -100,8 +101,8 @@ const MobileNavBar = ({ isOpen, setIsOpen, mode, setMode }) => {
             />
           </nav>
 
-          {/* Social Icons */}
-          <div className="flex items-center justify-center gap-6 mb-12">
+          {/* Social Icons - Moved closer to navigation */}
+          <div className="flex items-center justify-center gap-6 mt-8">
             <motion.a
               href="https://twitter.com/"
               target={"_blank"}
@@ -152,12 +153,6 @@ const MobileNavBar = ({ isOpen, setIsOpen, mode, setMode }) => {
             >
               <DribbbleIcon className="text-white" />
             </motion.a>
-            <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className="flex items-center justify-center rounded-full p-1"
-            >
-              {mode === "dark" ? <SunIcon className="fill-white" /> : <MoonIcon className="fill-white" />}
-            </button>
           </div>
         </motion.div>
       )}

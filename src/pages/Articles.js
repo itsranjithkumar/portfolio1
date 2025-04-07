@@ -11,6 +11,7 @@ import article3 from '../../public/images/articles/create modal component in rea
 import article4 from '../../public/images/articles/form validation in reactjs using custom react hook.png';
 import article5 from '../../public/images/articles/smooth scrolling in reactjs.png';
 import MobileArticlesView from '@/components/MobileArticlesView'
+import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image); 
 
@@ -175,6 +176,7 @@ const articles = () => {
         <title>Ranjithkumar | Articles Page</title>
         <meta name="description" content="any description" />
       </Head>
+      <TransitionEffect />
       <main>
         {/* Mobile View - Only visible on mobile */}
         <MobileArticlesView 
