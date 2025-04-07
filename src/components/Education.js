@@ -69,10 +69,10 @@ const Education = () => {
                 <motion.div 
                     style={{scaleY: scrollYProgress}}
                     ref={ref} 
-                    className='absolute left-9 top-0 w-[2px] h-full bg-black/75 origin-top'
+                    className='absolute left-9 top-0 w-[4px] h-full bg-black origin-top'
                 />
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 pl-1'>
                     <Details
                         type="Bachelor Of Science In Computer Science"
                         time="2016-2020"
