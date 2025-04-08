@@ -23,7 +23,7 @@ const HireMe = ({ className = "" }) => {
                 </motion.div>
 
                 <Link 
-                    href="mailto:abcde@gmail.com" 
+                    href="mailto:gokulakrishnan.msamy@gmail.com" 
                     className='flex items-center justify-center
                              absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
                              bg-black text-white dark:bg-white dark:text-black

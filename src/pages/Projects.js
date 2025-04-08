@@ -92,19 +92,17 @@ const Projects = () => {
   // Data for featured projects
   const featuredProjectsData = [
     {
-      title: "Crypto Screener Application",
+      title: "Sight v9",
       img: Project1,
-      summary:
-        "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.",
+      summary: "Collaborated with the Backend team to develop a data intensive and scalable application for powering up a data dashboard. Built at Ascendeum Pvt Ltd, this project focused on handling and visualizing large-scale data efficiently.",
       link: "/",
       type: "Featured Project",
       github: "/",
     },
     {
-      title: "NFT Marketplace Dashboard",
+      title: "Notification Services",
       img: Project1,
-      summary:
-        "A comprehensive NFT marketplace dashboard built with Next.js and Ethereum smart contracts. Track your NFT portfolio, browse collections, and monitor market trends in real-time.",
+      summary: "Created a unified backend API solution for notifications at NSPlus technologies, integrating multiple channels including SMS, Email, WhatsApp, Teams, Slack, and Jira. This centralized service was utilized across all products and websites.",
       link: "/",
       type: "Featured Project",
       github: "/",
@@ -114,44 +112,36 @@ const Projects = () => {
   // Data for regular projects
   const projectsData = [
     {
-      title: "Weather Forecast App",
+      title: "NSHRM - Resume Matching System",
       img: Project1,
-      summary: "A responsive weather app that provides real-time forecasts and alerts",
+      summary: "Led the full backend development for a resume matching algorithm at NSPlus Technologies, including data extraction from resumes, database storage, and scoring for job descriptions (JDs).",
       link: "/",
-      type: "Project",
+      type: "Backend Development",
       github: "/",
     },
     {
-      title: "Task Management System",
+      title: "My Excitation - Predictive Maintenance",
       img: Project1,
-      summary: "A productivity tool for organizing and tracking personal and team tasks",
+      summary: "At ABB India Ltd, implemented new features and resolved bugs for a predictive maintenance system that analyzes data and generates reports for industrial machines and devices.",
       link: "/",
-      type: "Project",
+      type: "Data Analysis",
       github: "/",
     },
     {
-      title: "E-commerce Product Page",
+      title: "3D Bin Packing Algorithm",
       img: Project1,
-      summary: "A modern product page with cart functionality and image gallery",
+      summary: "Developed a Python module at Gyandata Pvt Ltd implementing a 3D Bin Packing Algorithm to optimize three-dimensional object placement in containers, featuring an intuitive pictorial output system.",
       link: "/",
-      type: "Project",
+      type: "Algorithm Development",
       github: "/",
-    },
-    {
-      title: "Social Media Dashboard",
-      img: Project1,
-      summary: "Analytics dashboard for tracking engagement across social platforms",
-      link: "/",
-      type: "Project",
-      github: "/",
-    },
+    }
   ]
 
   return (
     <>
       <Head>
         <title>Ranjithkumar | Projects Page</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="Portfolio showcasing my professional projects and technical expertise" />
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center">

@@ -23,21 +23,22 @@ const MobileAboutSection = ({ profilePic }) => {
 
       {/* Biography Section */}
       <div className="w-full mb-12">
-        <h2 className="text-4xl font-bold mb-6 text-left">BIOGRAPHY</h2>
-        <div className="text-lg space-y-6">
+        <h2 className="text-4xl font-bold mb-6 text-left dark:text-light">BIOGRAPHY</h2>
+        <div className="text-lg space-y-6 dark:text-light">
           <p>
-            Hi, I&apos;m <span className="font-bold">CodeBucks</span>, a web developer and UI/UX designer with a passion
-            for creating beautiful, functional, and user-centered digital experiences. With 4 years of experience in the
-            field. I am always looking for new and innovative ways to bring my clients&apos; visions to life.
+            Hi, I&apos;m <span className="font-bold">Gokulakrishnan</span>, a passionate Full Stack Developer with expertise 
+            in Python and modern web technologies. I specialize in building scalable applications and implementing efficient 
+            backend solutions.
           </p>
           <p>
-            I believe that design is about more than just making things look pretty – it&apos;s about solving problems
-            and creating intuitive, enjoyable experiences for users.
+            With a strong foundation in both frontend and backend development, I excel at creating robust applications 
+            using technologies like Python, Flask, FastAPI, React, and various database systems. I have extensive experience 
+            in DevOps practices and microservices architecture.
           </p>
           <p>
-            Whether I&apos;m working on a website, mobile app, or other digital product, I bring my commitment to design
-            excellence and user-centered thinking to every project I work on. I look forward to the opportunity to bring
-            my skills and passion to your next project.
+            I&apos;m particularly passionate about optimizing application performance, implementing secure authentication systems, 
+            and developing scalable solutions. My experience includes working with diverse teams and delivering high-quality 
+            software solutions that meet business objectives.
           </p>
         </div>
       </div>

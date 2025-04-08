@@ -26,29 +26,22 @@ const MobileEducationItem = ({ type, time, place, info }) => {
 
 const MobileEducationSection = () => {
   return (
-    <div className="md:hidden w-full px-6 py-16">
-      <h2 className="text-5xl font-bold text-center mb-16">Education</h2>
+    <div className="md:hidden w-full px-6 py-16 dark:bg-dark">
+      <h2 className="text-5xl font-bold text-center mb-16 dark:text-light">Education</h2>
 
       <div className="relative">
         <MobileEducationItem
-          type="Bachelor Of Science In Computer Science"
-          time="2016-2020"
-          place="Massachusetts Institute Of Technology (MIT)"
-          info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
+          type="B.S. in Data Science and Applications"
+          time="Jan 2021 - Present"
+          place="Indian Institute of Technology, Madras"
+          info="CGPA: 8.5/10"
         />
 
         <MobileEducationItem
-          type="Master Of Computer Science"
-          time="2020-2022"
-          place="Stanford University"
-          info="Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding."
-        />
-
-        <MobileEducationItem
-          type="Online Coursework"
-          time="2022-Present"
-          place="Coursera And edX"
-          info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering."
+          type="B.E. in Mechanical Engineering"
+          time="August 2016 - June 2021"
+          place="Anna University, Chennai"
+          info="CGPA: 7.9/10"
         />
       </div>
     </div>

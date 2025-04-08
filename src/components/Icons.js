@@ -2,7 +2,7 @@ import * as React from "react";
 
 export const GithubIcon = ({ className, ...rest }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="github.com/gokul-1998"
     width="1em"
     height="1em"
     viewBox="0 0 512 512"
@@ -36,7 +36,7 @@ export const TwitterIcon = ({ className, ...rest }) => (
 // #0A66C2
 export const LinkedInIcon = ({ className, ...rest }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="linkedin.com/in/gokulakrishnan-muthusamy-141a78201"
     width="1em"
     height="1em"
     viewBox="0 0 256 256"

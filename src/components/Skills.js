@@ -89,29 +89,33 @@ const Skills = () => {
   const [mounted, setMounted] = useState(false)
 
   const skillsData = {
-    "Frontend Development": [
-      { name: "React & Next.js", level: 95, icon: "react" },
-      { name: "TypeScript", level: 90, icon: "typescript" },
-      { name: "Tailwind CSS", level: 95, icon: "tailwind" },
-      { name: "Framer Motion", level: 85, icon: "framer" },
-      { name: "Three.js", level: 80, icon: "threejs" },
-      { name: "WebGL", level: 75, icon: "webgl" },
+    "Languages & Frameworks": [
+      { name: "Python", level: 95, icon: "python" },
+      { name: "JavaScript", level: 90, icon: "javascript" },
+      { name: "React & React Native", level: 85, icon: "react" },
+      { name: "Flask & FastAPI", level: 90, icon: "flask" },
+      { name: "Django", level: 85, icon: "django" },
+      { name: "Vue.js", level: 80, icon: "vue" },
+      { name: "Node.js & Express", level: 85, icon: "node" },
+      { name: "Java & C++", level: 80, icon: "java" },
     ],
-    "Backend Architecture": [
-      { name: "Node.js", level: 90, icon: "node" },
-      { name: "Express.js", level: 85, icon: "express" },
-      { name: "GraphQL", level: 85, icon: "graphql" },
-      { name: "MongoDB", level: 90, icon: "mongodb" },
-      { name: "PostgreSQL", level: 85, icon: "postgresql" },
-      { name: "Redis", level: 80, icon: "redis" },
+    "Database & Data Engineering": [
+      { name: "PostgreSQL", level: 90, icon: "postgresql" },
+      { name: "Oracle DB", level: 85, icon: "oracle" },
+      { name: "MySQL", level: 85, icon: "mysql" },
+      { name: "SQLAlchemy ORM", level: 90, icon: "sqlalchemy" },
+      { name: "Pandas & NumPy", level: 90, icon: "pandas" },
+      { name: "Data Visualization", level: 85, icon: "matplotlib" },
+      { name: "Redis & Celery", level: 85, icon: "redis" },
     ],
-    "Development & DevOps": [
-      { name: "Git & GitHub", level: 95, icon: "git" },
-      { name: "Docker", level: 85, icon: "docker" },
-      { name: "AWS Services", level: 80, icon: "aws" },
-      { name: "CI/CD", level: 85, icon: "cicd" },
-      { name: "System Design", level: 90, icon: "system" },
-      { name: "Testing", level: 85, icon: "testing" },
+    "Architecture & DevOps": [
+      { name: "Microservices", level: 90, icon: "microservices" },
+      { name: "MVC Pattern", level: 95, icon: "mvc" },
+      { name: "Docker", level: 90, icon: "docker" },
+      { name: "Azure DevOps", level: 85, icon: "azure" },
+      { name: "GitHub Actions", level: 85, icon: "github" },
+      { name: "Linux & Shell", level: 90, icon: "linux" },
+      { name: "RBAC & Security", level: 85, icon: "security" },
     ]
   }
 
@@ -122,7 +126,7 @@ const Skills = () => {
   if (!mounted) return null
 
   return (
-    <section className="py-32 px-8 relative bg-white">
+    <section className="py-32 px-8 relative bg-white dark:bg-dark">
       {/* Header */}
       <div className="text-center mb-32">
         <motion.div
@@ -130,9 +134,9 @@ const Skills = () => {
           animate={{ opacity: 1, y: 0 }}
           className="relative inline-block"
         >
-          <h2 className="text-7xl md:text-8xl font-bold text-black mb-6">Expertise</h2>
+          <h2 className="text-7xl md:text-8xl font-bold text-black dark:text-light mb-6">Technical Skills</h2>
           <motion.div
-            className="absolute -bottom-4 left-1/2 w-1/2 h-1 bg-black -translate-x-1/2"
+            className="absolute -bottom-4 left-1/2 w-1/2 h-1 bg-black dark:bg-light -translate-x-1/2"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -142,9 +146,9 @@ const Skills = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ delay: 0.8 }}
-          className="text-xl md:text-2xl mt-8 tracking-wide max-w-3xl mx-auto text-black"
+          className="text-xl md:text-2xl mt-8 tracking-wide max-w-3xl mx-auto text-black dark:text-light/75"
         >
-          Mastering modern technologies to create exceptional digital experiences
+          Full Stack Development | Data Engineering | DevOps
         </motion.p>
       </div>
 

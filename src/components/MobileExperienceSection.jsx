@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 
-const MobileExperienceItem = ({ position, company, time, address, work, color = "pink" }) => {
+const MobileExperienceItem = ({ position, company, time, address, work }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -10,12 +10,14 @@ const MobileExperienceItem = ({ position, company, time, address, work, color = 
       className="relative pl-8 pb-12 border-l-2 border-black/50 last:border-l-0 last:pb-0"
     >
       {/* Circle indicator */}
-      <div className={`absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-${color}-500 border-2 border-white`}></div>
+      <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-pink-600 border-2 border-white"></div>
 
       {/* Content */}
       <div>
         <h3 className="text-2xl font-bold">{position}</h3>
-        <h4 className={`text-xl font-semibold text-${color}-500 mb-1`}>@{company}</h4>
+        <h4 className="text-xl font-semibold text-pink-600 mb-1">
+            {company}
+        </h4>
         <p className="text-lg text-gray-600 mb-3">
           {time} | {address}
         </p>
@@ -32,27 +34,35 @@ const MobileExperienceSection = () => {
 
       <div className="relative">
         <MobileExperienceItem
-          position="Software Engineer"
-          company="Google"
-          time="2022-Present"
-          address="Mountain View, CA"
-          work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+          position="Senior Software Engineer"
+          company="Articence Inc"
+          time="Sept 2024 - Present"
+          address="California (Remote)"
+          work="Handling end to end integrations and stabilizing the development life cycle for the team. Working on CI/CD, optimizing the code, bug fixing and deployment to Production."
         />
 
         <MobileExperienceItem
-          position="Intern"
-          company="Facebook"
-          time="Summer 2021"
-          address="Menlo Park, CA."
-          work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature."
+          position="Full Stack Developer"
+          company="IIT Madras"
+          time="Jan 2024 - April 2024"
+          address="Chennai"
+          work="Entrusted with the development of a website for students and mentors on scale. Developed and deployed the application from scratch."
         />
 
         <MobileExperienceItem
-          position="Software Developer"
-          company="Amazon"
-          time="2020-2021"
-          address="Seattle, WA"
-          work="Worked on a team responsible for developing new features for Amazon's e-commerce platform, focusing on improving the user experience and optimizing the checkout process."
+          position="Assistant Backend Engineer"
+          company="Ascendeum Pvt Ltd"
+          time="May 2023 - Jan 2024"
+          address="Delhi"
+          work="Took responsibility to fix various bugs and optimizing the api performance for scale improving the overall efficiency by 15%"
+        />
+
+        <MobileExperienceItem
+          position="Python Developer"
+          company="NSPlus Technologies Pvt Ltd"
+          time="Oct 2021 - April 2023"
+          address="Bangalore"
+          work="Tasked with full-stack development of a resume matching algorithm for a specified JD in one project and integration of a backend API in another."
         />
       </div>
     </div>

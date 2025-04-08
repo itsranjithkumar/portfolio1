@@ -50,7 +50,7 @@ const NavBar = () => {
           <Logo />
         </div>
 
-        {/* Desktop Social Icons - Increased icon size */}
+        {/* Desktop Social Icons - Updated URLs */}
         <nav className="hidden sm:flex items-center justify-center flex-wrap">
           <motion.a
             href="https://twitter.com/"
@@ -63,7 +63,7 @@ const NavBar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/gokul-1998"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -73,7 +73,7 @@ const NavBar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/"
+            href="https://linkedin.com/in/gokulakrishnan-muthusamy-141a78201"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}

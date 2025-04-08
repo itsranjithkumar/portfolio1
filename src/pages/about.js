@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Head from "next/head"
 import Layout from "@/components/Layout"
-import profilepic from "../../public/images/profile/developer-pic-2.jpg"
+import profilepic from "../../public/images/profile/gokul.png"
 import Image from "next/image"
 import { useMotionValue, useSpring, useInView } from "framer-motion"
 import AnimatedText from "@/components/AnimatedText"
@@ -69,29 +69,29 @@ const about = () => {
                 className="col-span-1 md:col-span-3 flex flex-col items-start justify-start order-2 md:order-1 
                 px-4 md:px-0 mt-6 md:mt-0"
               >
-                <h2 className="mb-4 text-xl font-bold uppercase text-black/75 self-center md:self-start">Biography</h2>
+                <h2 className="mb-4 text-xl font-bold uppercase text-black/75 dark:text-light/75 self-center md:self-start">Biography</h2>
                 <p
-                  className="font-medium text-base md:text-lg text-dark !leading-relaxed 
+                  className="font-medium text-base md:text-lg text-dark dark:text-light !leading-relaxed 
                   text-center md:text-left whitespace-normal"
                 >
-                  Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful,
-                  functional, and user-centered digital experiences. With 4 years of experience in the field, I am
-                  always looking for new and innovative ways to bring my clients&apos; visions to life.
+                  Hi, I&apos;m Gokulakrishnan, a passionate Full Stack Developer with expertise in Python and modern web technologies. 
+                  I specialize in building scalable applications and implementing efficient backend solutions.
                 </p>
                 <p
-                  className="my-4 font-medium text-base md:text-lg text-dark !leading-relaxed 
+                  className="my-4 font-medium text-base md:text-lg text-dark dark:text-light !leading-relaxed 
                   text-center md:text-left whitespace-normal"
                 >
-                  I believe that design is about more than just making things look pretty – it&apos;s about solving
-                  problems and creating intuitive, enjoyable experiences for users.
+                  With a strong foundation in both frontend and backend development, I excel at creating robust applications 
+                  using technologies like Python, Flask, FastAPI, React, and various database systems. I have extensive experience 
+                  in DevOps practices and microservices architecture.
                 </p>
                 <p
-                  className="font-medium text-base md:text-lg text-dark !leading-relaxed 
+                  className="font-medium text-base md:text-lg text-dark dark:text-light !leading-relaxed 
                   text-center md:text-left whitespace-normal"
                 >
-                  Whether I&apos;m working on a website, mobile app, or other digital product, I bring my commitment to
-                  design excellence and user-centered thinking to every project I work on. I look forward to the
-                  opportunity to bring my skills and passion to your next project.
+                  I&apos;m particularly passionate about optimizing application performance, implementing secure authentication systems, 
+                  and developing scalable solutions. My experience includes working with diverse teams and delivering high-quality 
+                  software solutions that meet business objectives.
                 </p>
               </div>
 
