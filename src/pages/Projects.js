@@ -140,7 +140,7 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Ranjithkumar | Projects Page</title>
+        <title>GokulKrishnanGokulKrishnan | Projects Page</title>
         <meta name="description" content="Portfolio showcasing my professional projects and technical expertise" />
       </Head>
       <TransitionEffect />
@@ -153,7 +153,7 @@ const Projects = () => {
           <Layout className="pt-16">
             <AnimatedText
               text="Imagination Trumps Knowledge!"
-              className="mb-8 sm:mb-16 !text-4xl sm:!text-6xl md:!text-7xl lg:!text-8xl"
+              className="mb-8 sm:mb-16 !text-3xl sm:!text-5xl md:!text-6xl lg:!text-7xl"
             />
             <div className="grid grid-cols-12 gap-8 md:gap-24 items-center justify-center">
               {featuredProjectsData.map((project, index) => (

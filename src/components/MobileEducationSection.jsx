@@ -27,7 +27,7 @@ const MobileEducationItem = ({ type, time, place, info }) => {
 const MobileEducationSection = () => {
   return (
     <div className="md:hidden w-full px-6 py-16 dark:bg-dark">
-      <h2 className="text-5xl font-bold text-center mb-16 dark:text-light">Education</h2>
+      <h2 className="text-6xl font-bold text-center mb-16 dark:text-light">Education</h2>
 
       <div className="relative">
         <MobileEducationItem

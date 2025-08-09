@@ -80,7 +80,7 @@ export default function Home() {
                   Resume <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <Link
-                  href="mailto:ranjithkumar1999@gmail.com"
+                  href="mailto:gokulakrishnan.msamy@gmail.com"
                   target={"_blank"}
                   className="text-lg font-medium capitalize text-dark underline"
                 >
@@ -121,7 +121,7 @@ export default function Home() {
                     Resume <LinkArrow className={"w-6 ml-1"} />
                   </Link>
                   <Link
-                    href="mailto:ranjithkumar1999@gmail.com"
+                    href="mailto:gokulakrishnan.dev@gmail.com"
                     target={"_blank"}
                     className="ml-4 text-lg font-medium capitalize text-dark underline"
                   >

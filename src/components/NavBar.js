@@ -1,18 +1,15 @@
-"use client"
-
-import { useState } from "react"
-import Link from "next/link"
-import Logo from "./Logo"
-import { useRouter, usePathname } from "next/navigation"
-import { TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, DribbbleIcon } from "./Icons"
-import { motion } from "framer-motion"
-import MobileNavBar from "./MobileNavBar"
+import { useState } from "react"; // Already imported
+import Link from "next/link";
+import Logo from "./Logo";
+import { useRouter, usePathname } from "next/navigation";
+import { TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, DribbbleIcon } from "./Icons";
+import { motion } from "framer-motion";
+import MobileNavBar from "./MobileNavBar";
 
 const CustomLink = ({ href, title, className = "", onClick }) => {
   const pathname = usePathname();
-  
   const isActive = pathname === href;
-  
+
   return (
     <Link href={href} className={`${className} relative group`} onClick={onClick}>
       {title}
@@ -25,24 +22,46 @@ const CustomLink = ({ href, title, className = "", onClick }) => {
         &nbsp;
       </span>
     </Link>
-  )
-}
+  );
+};
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+const NavBar = ({ showNavBar = true }) => {
+  if (!showNavBar) return null;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(''); // Step 2: State for active link
 
   return (
-    <header className="w-full px-8 sm:px-32 py-8 font-medium flex items-center justify-between relative">
+    <header className="top-0 z-50 w-full px-8 sm:px-32 py-8 font-medium flex items-center justify-between relative backdrop-blur bg-white/80 dark:bg-dark/80">
       <div className="w-full flex justify-between items-center">
         {/* Mobile Navigation */}
         <MobileNavBar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-        {/* Desktop Navigation - Increased font size */}
+        {/* Desktop Navigation */}
         <nav className="hidden sm:flex">
-          <CustomLink href="/" title="Home" className="mr-4 text-xl" />
-          <CustomLink href="/about" title="About" className="mx-4 text-xl" />
-          <CustomLink href="/Projects" title="Projects" className="mx-4 text-xl" />
-          <CustomLink href="/Articles" title="Articles" className="ml-4 text-xl" />
+          <CustomLink 
+            href="/" 
+            title="Home" 
+            className={`mr-4 text-xl text-dark ${activeLink === 'home' ? 'underline' : ''}`} 
+            onClick={() => setActiveLink('home')} 
+          />
+          <CustomLink 
+            href="/about" 
+            title="About" 
+            className={`mx-4 text-xl text-black ${activeLink === 'about' ? 'underline' : ''}`} 
+            onClick={() => setActiveLink('about')} 
+          />
+          <CustomLink 
+            href="/Projects" 
+            title="Projects" 
+            className={`mx-4 text-xl text-dark ${activeLink === 'projects' ? 'underline' : ''}`} 
+            onClick={() => setActiveLink('projects')} 
+          />
+          <CustomLink 
+            href="/Articles" 
+            title="Articles" 
+            className={`ml-4 text-xl text-dark ${activeLink === 'articles' ? 'underline' : ''}`} 
+            onClick={() => setActiveLink('articles')} 
+          />
         </nav>
 
         {/* Logo - Center */}
@@ -50,17 +69,17 @@ const NavBar = () => {
           <Logo />
         </div>
 
-        {/* Desktop Social Icons - Updated URLs */}
+        {/* Desktop Social Icons */}
         <nav className="hidden sm:flex items-center justify-center flex-wrap">
           <motion.a
-            href="https://twitter.com/"
+            href="mailto:gokulakrishnan.msamy@gmail.com"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-8 mx-3"
+            className="w-8 mx-3 flex items-center justify-center"
             rel="noreferrer"
           >
-            <TwitterIcon />
+            <span role="img" aria-label="email" className="text-2xl">✉️</span>
           </motion.a>
           <motion.a
             href="https://github.com/gokul-1998"
@@ -82,31 +101,11 @@ const NavBar = () => {
           >
             <LinkedInIcon />
           </motion.a>
-          <motion.a
-            href="https://www.pinterest.com/"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-8 mx-3"
-            rel="noreferrer"
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="https://dribbble.com/"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-8 ml-3"
-            rel="noreferrer"
-          >
-            <DribbbleIcon />
-          </motion.a>
+          
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
-
+export default NavBar;

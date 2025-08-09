@@ -40,7 +40,7 @@ const Experience = () => {
         <div className='my-64'>
             <div className="text-center mb-24">
                 <motion.h2 
-                    className="text-7xl md:text-8xl font-bold mb-8 relative inline-block dark:text-light"
+                    className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 relative inline-block dark:text-light"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}

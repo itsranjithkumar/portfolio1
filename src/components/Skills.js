@@ -57,7 +57,7 @@ const SkillCategory = ({ title, skills, delay }) => {
     >
       <div className="relative mb-12">
         <motion.h3 
-          className="text-4xl md:text-5xl font-bold"
+          className="text-3xl md:text-4xl font-bold"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -134,7 +134,7 @@ const Skills = () => {
           animate={{ opacity: 1, y: 0 }}
           className="relative inline-block"
         >
-          <h2 className="text-7xl md:text-8xl font-bold text-black dark:text-light mb-6">Technical Skills</h2>
+          <h2 className="text-6xl md:text-7xl font-bold text-black dark:text-light mb-6">Technical Skills</h2>
           <motion.div
             className="absolute -bottom-4 left-1/2 w-1/2 h-1 bg-black dark:bg-light -translate-x-1/2"
             initial={{ scaleX: 0 }}

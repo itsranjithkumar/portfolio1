@@ -1,7 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const TransitionEffect = () => {
+import { useEffect } from 'react';
+const TransitionEffect = ({ onTransition }) => {
+  useEffect(() => {
+    if (typeof onTransition === 'function') {
+      onTransition(true);
+      const timer = setTimeout(() => onTransition(false), 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [onTransition]);
   return (
     <>
       <motion.div 

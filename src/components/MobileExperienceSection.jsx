@@ -30,7 +30,7 @@ const MobileExperienceItem = ({ position, company, time, address, work }) => {
 const MobileExperienceSection = () => {
   return (
     <div className="md:hidden w-full px-6 py-16">
-      <h2 className="text-5xl font-bold text-center mb-16">Experience</h2>
+      <h2 className="text-6xl font-bold text-center mb-16">Experience</h2>
 
       <div className="relative">
         <MobileExperienceItem

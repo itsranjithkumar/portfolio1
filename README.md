@@ -42,4 +42,4 @@ on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_me
 
 
 
-deploy link - https://portfolio-ce15-o9wvhocw4-ranjith-kumar-s-projects.vercel.app/
+deploy link - https://portfolio-ce15-o9wvhocw4-GokulKrishnan-GokulKrishnan-s-projects.vercel.app/
